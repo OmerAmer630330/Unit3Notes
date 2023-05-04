@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style.css">
+    <title>Title</title>
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Change Contents Notes</h1>
+        <div class="row">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="firstname" placeholder="Zack">
+            </div>
+            <div>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="lastname" placeholder="Mcguire">
+            </div>
+        </div>
+        <button name="clear">Clear</button>
+        <p class="hidden"></p>
+    </div>
+</div>
+<script>
+    const firstname = document.getElementById('first');
+    const lastname = document.getElementById('last');
+    const full = document.querySelector('p');
+    const clearButton = document.querySelector('[name="clear"]');
+
+    firstname.addEventListener('change', function (e) {
+        let first = firstname.value;
+        let last = lastname.value;
+        let fullname = `hello ${first} ${last}`;
+        full.textContent= fullname;
+    })
+    lastname.addEventListener('change', function (e) {
+        let first = firstname.value;
+        let last = lastname.value;
+        let fullname = `hello ${first} ${last}`;
+        if (fullname.length>1){
+            full.classList.remove("hidden")
+        }else{
+            full.classList.add("hidden")
+        }
+        full.textContent = `hello ${fullname}`;
+    })
+    clearButton.addEventListener('click', function (e) {
+        firstname.value="";
+        lastname.value="";
+        full.textContent= "";
+    })
+</script>
+</body>
+</html>
