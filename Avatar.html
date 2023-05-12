@@ -23,7 +23,7 @@
     </div>
 </div>
 <script>
-    const picure = img
+    const picture = document.querySelector('img');
     const vader = document.querySelector('V');
     const revan = document.querySelector('R');
     const maul = document.querySelector('M');
@@ -34,9 +34,24 @@
 
     const char = document.querySelector('.content');
 
-    vader.addEventListener('click', function(e){
-      picture.src="https://www.thedigitalfix.com/wp-content/sites/thedigitalfix/2022/07/Star-Wars-Darth-Vader-explained-550x309.jpg"
-    })
+    V.addEventListener('click', function(e){
+      picture.src="https://imgix.bustle.com/inverse/1d/e3/d6/45/3ccb/4458/aad6/e56f727d6fd8/screen-shot-2017-01-20-at-35050-pmpng.png?w=400&h=300&fit=crop&crop=faces&auto=format%2Ccompress"
+             });
+    R.addEventListener('click', function(e) {
+        picture.src = "https://steamuserimages-a.akamaihd.net/ugc/1862803200775135346/B1073B93141EE1BB692CDC4479CBE3E84FBD817D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+    });
+    M.addEventListener('click', function(e) {
+        picture.src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Darth_Maul_Clone_Wars.jpg/300px-Darth_Maul_Clone_Wars.jpg"
+    });
+    N.addEventListener('click', function(e) {
+        picture.src = "https://comicvine.gamespot.com/a/uploads/scale_medium/0/77/214182-118145-darth-nihilus.jpg"
+    });
+    T.addEventListener('click', function(e) {
+        picture.src = "https://i.redd.it/w3n68i9mhxb91.jpg"
+    });
+    S.addEventListener('click', function(e) {
+        picture.src = "https://render.fineartamerica.com/images/rendered/search/print/6/8/break/images-medium-5/emperor-palpatine-ryan-barger.jpg"
+    });
 </script>
 </body>
 </html>
