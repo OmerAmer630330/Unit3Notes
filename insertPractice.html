@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this</h3>
+        <h4>I don't want this</h4>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    content.innerHTML = '<h1 class="gone"> DrDoom is very underrated</h1><h4>Darth Vader </h4>'
+
+    const DrDoom = document.createElement('h1');
+    DrDoom.innerHTML = 'DrDoom is very underrated';
+    content.appendChild(DrDoom);
+
+    const Maul = document.createElement('h1');
+    Maul.innerHTML = 'Maul';
+    content.appendChild(Maul);
+
+    const DocOc = document.createElement('h1');
+    DocOc.innerHTML = 'DocOc';
+    content.appendChild(DocOc);
+
+    const Joker = document.createElement('h1');
+    Joker.innerHTML = 'Joker';
+    content.appendChild(Joker);
+
+    const food = document.createElement('h1');
+    food.innerHTML= 'I love Pizza';
+    content.insertAdjacentElement('afterend', food)
+
+    const unwanterElement = document.querySelector('h4');
+    unwanterElement.remove();
+
+    const unwanterElement2 = document.querySelector('.gone');
+    unwanterElement2.remove();
+
+
+</script>
+</body>
+</html>
