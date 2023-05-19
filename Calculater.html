@@ -48,7 +48,7 @@
 
         if (sim=="add"){
             const equation = document.createElement('h1');
-            equation.innerHTML= `${first}+${last} = ${first+last}`;
+            equation.innerHTML= `${first}+${last} = ${first+last} `;
             history.insertAdjacentElement(`afterBegin`, equation)
         }
         if (sim=="take"){
@@ -73,6 +73,7 @@
         container.value="+";
         clearButton.value = "";
         calculateButton.value = "";
+
     })
 </script>
 </body>
