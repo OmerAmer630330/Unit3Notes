@@ -37,46 +37,56 @@
     const ans = document.querySelector('p');
     const calculateButton = document.getElementById('calc');
     const clearButton = document.getElementById('clear');
-    const history = document.getElementById('');
+    const history = document.getElementById('history');
+    const container = document.getElementById('container')
 
 
-    let add= document.createElement("p")
-        add.innerHTML=`${num1.value}+${num2.value}=${num1.value+num2.value}`;
-    history.appendChild(add);
-
-    let take= document.createElement("p")
-    add.innerHTML=`${num1.value}-${num2.value}=${num1.value-num2.value}`;
-    history.appendChild(add);
-
-    let multi= document.createElement("p")
-    add.innerHTML=`${num1.value}*${num2.value}=${num1.value*num2.value}`;
-    history.appendChild(add);
-
-    let divide= document.createElement("p")
-    add.innerHTML=`${num1.value}/${num2.value}=${num1.value/num2.value}`;
-    history.appendChild(add);
+    //
+    // let take= document.createElement("p");
+    // add.innerHTML=`${num1.value}-${num2.value}=${num1.value-num2.value}`;
+    // history.appendChild(add);
+    //
+    // let multi= document.createElement("p");
+    // add.innerHTML=`${num1.value}*${num2.value}=${num1.value*num2.value}`;
+    // history.appendChild(add);
+    //
+    // let divide= document.createElement("p");
+    // add.innerHTML=`${num1.value}/${num2.value}=${num1.value/num2.value}`;
+    // history.appendChild(add);
 
     calculateButton.addEventListener('click', function (e) {
-        let sideA = +a.value;
-        let sideB = +b.value;
-        if (add(sideA, sideB,)){
-            ans.textContent = `${}`
+        let first = +num1.value;
+        let last = +num2.value;
+        let sim = container.value;
+
+        if (sim=="add"){
+            const equation = document.createElement('h1');
+            equation.innerHTML= `${first}+${last} = ${first+last}`;
+            history.insertAdjacentElement(`afterBegin`, equation)
         }
-        if (take(sideA, sideB,)){
-            ans.textContent = `${}`
+        if (sim=="take"){
+            const equation = document.createElement('h1');
+            equation.innerHTML= `${first}-${last} = ${first-last}`;
+            history.insertAdjacentElement(`afterBegin`, equation)
         }
-        if (multi(sideA, sideB,)){
-            ans.textContent = `${}`
+        if (sim=="multi"){
+            const equation = document.createElement('h1');
+            equation.innerHTML= `${first}*${last} = ${first*last}`;
+            history.insertAdjacentElement(`afterBegin`, equation)
         }
-        if (divide()){
-            ans.textContentm=`${}`
+        if (sim=="divide"){
+            const equation = document.createElement('h1');
+            equation.innerHTML= `${first}/${last} = ${first/last}`;
+            history.insertAdjacentElement(`afterBegin`, equation)
         }
     })
     clearButton.addEventListener('click', function (e) {
+        num1.value="";
+        num2.value="";
+        container.value="+";
         clearButton.value = "";
         calculateButton.value = "";
     })
 </script>
-
 </body>
 </html>
