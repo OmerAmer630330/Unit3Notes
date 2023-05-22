@@ -19,6 +19,7 @@
                     <option value="take" id="take">-</option>
                     <option value="multi" id="multi">*</option>
                     <option value="divide" id="divide">/</option>
+                    <option value="r" id="r">%</option>
                 </select>
             </div>
             <div>
@@ -66,13 +67,21 @@
             equation.innerHTML= `${first}/${last} = ${first/last}`;
             history.insertAdjacentElement(`afterBegin`, equation)
         }
+        if (sim=="r"){
+            const equation = document.createElement('h1');
+            equation.innerHTML= `${first}%${last} = ${first%last}`;
+            history.insertAdjacentElement(`afterBegin`, equation)
+        }
     })
     clearButton.addEventListener('click', function (e) {
         num1.value="";
         num2.value="";
-        container.value="+";
+        container.value="";
         clearButton.value = "";
         calculateButton.value = "";
+        history.innerHTML ="";
+        document.value="";
+
 
     })
 </script>
